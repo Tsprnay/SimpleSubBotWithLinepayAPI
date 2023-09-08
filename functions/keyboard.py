@@ -1,9 +1,10 @@
 # Author: https://github.com/Tsprnay
 from aiogram import types
-from aiogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup
-from aiogram.utils.keyboard import ReplyKeyboardBuilder, InlineKeyboardBuilder
+from aiogram.types import ReplyKeyboardMarkup
+from aiogram.utils.keyboard import ReplyKeyboardBuilder
 
 from language import language
+
 
 def start_button() -> ReplyKeyboardMarkup:
     keyboard = ReplyKeyboardBuilder()

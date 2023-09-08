@@ -1,10 +1,9 @@
 import asyncio
 import logging
-from handlers import start_handler, text_handler, callback_handler
-from config import bot, dp
-from aiogram import types
-from aiogram import Router, F
 import subprocess
+
+from config import bot, dp
+from handlers import start_handler, text_handler, callback_handler
 
 logging.basicConfig(level=logging.INFO)
 

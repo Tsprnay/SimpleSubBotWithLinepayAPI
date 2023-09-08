@@ -1,11 +1,10 @@
 # Author: https://github.com/Tsprnay
 import hashlib
 
+from aiogram.types.input_file import FSInputFile
 from quart import Quart, request
 
-from config import bot, admin_ids
-from config import linepay_id, linepay_secret2
-from aiogram.types.input_file import FSInputFile
+from config import linepay_id, linepay_secret2, support_username, bot, admin_ids
 from language import language
 
 app = Quart(__name__)
@@ -38,7 +37,7 @@ async def payment_notification():
     order_id_raw, sub_number, user_id = order_id.split('|')
     for id in admin_ids:
         await bot.send_message(id, language['admin_successfully_message'].format(amount=amount, user_id=user_id, sub_number=sub_number), parse_mode='HTML')
-    await bot.send_document(user_id,document=file, caption=language[f'user_successfully_message_{sub_number}'].format(amount=amount), parse_mode='HTML')
+    await bot.send_document(user_id,document=file, caption=language[f'user_successfully_message_{sub_number}'].format(support=support_username), parse_mode='HTML')
     return "Payment processed successfully"
 
 if __name__ == '__main__':

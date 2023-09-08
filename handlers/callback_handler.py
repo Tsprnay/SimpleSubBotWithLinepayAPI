@@ -1,10 +1,10 @@
 # Author: https://github.com/Tsprnay
 from aiogram import Bot, types, Router, F
 
-from functions.keyboard import payment_link
-from language import language
-from functions.payment import create_invoice, order_id_generator
 from config import subs
+from functions.keyboard import payment_link
+from functions.payment import create_invoice, order_id_generator
+from language import language
 
 router = Router()
 

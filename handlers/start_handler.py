@@ -1,5 +1,5 @@
 # Author: https://github.com/Tsprnay
-from aiogram import Bot, types, Router, F
+from aiogram import Bot, types, Router
 from aiogram.filters import Command
 
 from functions.keyboard import start_button

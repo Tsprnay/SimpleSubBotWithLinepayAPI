@@ -1,9 +1,10 @@
 # Author: https://github.com/Tsprnay
 import hashlib
-import string
 import random
+import string
 
 from config import linepay_id, linepay_secret1
+
 
 async def order_id_generator(user_id, length=10):
     letters = string.ascii_letters + string.digits
